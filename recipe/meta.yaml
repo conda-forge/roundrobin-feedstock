@@ -5,20 +5,22 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/r/roundrobin/roundrobin-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/r/roundrobin/roundrobin-{{ version }}.tar.gz
     sha256: 7e9d19a5bd6123d99993fb935fa86d25c88bb2096e493885f61737ed0f5e9abd
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=2.7
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -27,6 +29,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/linnik/roundrobin

@@ -1,4 +1,4 @@
-{% set version = "0.0.4" %}
+{% set version = "0.1.0" %}
 
 package:
   name: roundrobin
@@ -6,10 +6,10 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/roundrobin/roundrobin-{{ version }}.tar.gz
-    sha256: 7e9d19a5bd6123d99993fb935fa86d25c88bb2096e493885f61737ed0f5e9abd
+    sha256: 14126ed1706a9c6638c81c3f3d915357f7ab0c0245c464a611eb5903811ee45b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check

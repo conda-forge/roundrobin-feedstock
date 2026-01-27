@@ -3,11 +3,13 @@ About roundrobin-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/roundrobin-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/linnik/roundrobin
+Home: https://pypi.org/project/roundrobin
 
 Package license: MIT
 
 Summary: Collection of roundrobin utilities
+
+Development: https://github.com/linnik/roundrobin
 
 Current build status
 ====================
